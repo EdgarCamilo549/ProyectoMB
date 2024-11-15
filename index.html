@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Consultas de Datos de Clientes</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Consultas de Datos de Clientes</h1>
+
+  <!-- Contenedor de búsqueda en disposición vertical -->
+  <div class="busqueda-contenedor">
+    <!-- Lista desplegable para Marca -->
+    <label for="busqueda-marca">Marca:</label>
+    <select id="busqueda-marca">
+      <option value="">Selecciona una Marca</option>
+      <option value="Veeam">Veeam</option>
+      <option value="Trellix">Trellix</option>
+      <option value="Uipath">Uipath</option>
+      <!-- Agrega más opciones aquí -->
+    </select>
+    <button id="buscar-marca-btn">Buscar</button>
+
+    <!-- Campo de búsqueda para Branch Customer Number -->
+    <label for="busqueda-branch">Branch Customer Number:</label>
+    <input type="text" id="busqueda-branch" placeholder="Ingresa el Branch">
+    <button id="buscar-branch-btn">Buscar</button>
+
+    <!-- Campo de búsqueda para Customer Name -->
+    <label for="busqueda-customer">Customer Name:</label>
+    <input type="text" id="busqueda-customer" placeholder="Ingresa el nombre del cliente">
+    <button id="buscar-customer-btn">Buscar</button>
+
+    <!-- Campo de búsqueda para Desarrollo de Partners - UF -->
+    <label for="busqueda-partners">Desarrollo de Partners - UF:</label>
+    <input type="text" id="busqueda-partners" placeholder="Ingresa el Desarrollo de Partners">
+    <button id="buscar-partners-btn">Buscar</button>
+
+    <!-- Campo de búsqueda para Ejecutivo Desarrollo de Canal -->
+    <label for="busqueda-ejecutivo">Ejecutivo Desarrollo de Canal:</label>
+    <input type="text" id="busqueda-ejecutivo" placeholder="Ingresa el Ejecutivo">
+    <button id="buscar-ejecutivo-btn">Buscar</button>
+
+    <!-- Botón de limpiar y exportar -->
+    <button id="limpiar-btn">Limpiar</button>
+    <button id="exportar-btn">Exportar a Excel</button>
+  </div>
+
+  <!-- Tabla de resultados -->
+  <div id="tabla-contenedor" style="display: none;">
+    <table id="tabla-datos">
+      <thead>
+        <tr>
+          <th>Nombre completo</th>
+          <th>Teléfono</th>
+          <th>Correo electrónico</th>
+          <th>Estado</th>
+        </tr>
+      </thead>
+      <tbody id="tabla-cuerpo">
+      </tbody>
+    </table>
+  </div>
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.16.9/xlsx.full.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+  <script src="app.js"></script>
+
+</body>
+</html>
